@@ -1,0 +1,64 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Rajdhani';
+}
+body{
+    background-color: #34495e;
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.clock-box{
+    width: 500px;
+    height: 500px;
+    background-image: url(clock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.8);
+}
+.clock{
+    width: 280px;
+    height: 280px;
+	position: relative;
+}
+.clock::after{
+    content: '';
+    background: #1e3338;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.clock div{
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+	transition: all 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.clock div.hours{
+	height: 7px;
+	background-color: #fecd33;
+}
+.clock div.mins{
+	height: 5px;
+	background-color: #1e3338;
+}
+.clock div.secs{
+	height: 3px;
+	background-color: #fff;
+}
